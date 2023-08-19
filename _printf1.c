@@ -3,12 +3,12 @@
 int _printf(const char *format, ...)
 {
 	int charct_print = 0;
-	va_list list_of_arg;
+	va_list arg_ls;
 
 	if (format == NULL)
 		return -1;
 
-	va_start(arg_ls, formal);
+	va_start(arg_ls, format);
 
 	while (*format)
 	{
@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 			}
 			else if (*format == 'c')
 			{
-				char c = var_arg(arg_ls, int);
+				char c = va_arg(arg_ls, int);
 				write(1, &c, 1);
 				charct_print++;
 			}
@@ -52,4 +52,13 @@ int _printf(const char *format, ...)
 	va_end(arg_ls);
 
 	return charct_print;
+}
+
+int main()
+{
+	_printf("Leo\n");
+	_printf("%c\n", 'v');
+	_printf("%s\n", "String");
+	_printf("%%\n");
+	return 0;
 }
