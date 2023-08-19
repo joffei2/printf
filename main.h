@@ -39,5 +39,19 @@ int prnt_hexa(va_list arg_ls, char map_to[],char buf[],
 
 
 
+/****************** functions2.c ******************/
+
+
+int prnt_pointer(va_list arg_ls, char buf[],
+	int flags, int width, int precision, int size);
+int prnt_non_printable(va_list arg_ls, char buf[],
+	int flags, int width, int precision, int size);
+int prnt_reverse(va_list arg_ls, char buf[],
+	int flags, int width, int precision, int size);
+int prnt_rot13string(va_list arg_ls, char buf[],
+	int flags, int width, int precision, int size);
+
+
+
 int _printf(const char *format, ...);
 #endif
