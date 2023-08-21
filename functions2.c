@@ -2,7 +2,7 @@
 
 /****************** print pointer ******************/
 /**
- * prnt_pointer - Prints value of a pointer variable
+ * print_pointer - Prints value of a pointer variable
  * @arg_ls: List of args
  * @buf: Buffer array that handle print
  * @flags:  Calculates flags
@@ -11,7 +11,7 @@
  * @size: Size spec
  * Return: Number of chars to be printed.
  */
-int prnt_pointer(va_list arg_ls, char buf[],
+int print_pointer(va_list arg_ls, char buf[],
 	int flags, int width, int precision, int size)
 {
 	char extra_c = 0, pad = ' ';
@@ -53,7 +53,7 @@ int prnt_pointer(va_list arg_ls, char buf[],
 
 /************************* non printables *************************/
 /**
- * prnt_non_printable - Print the ascii codes in hexa of non printable chars
+ * print_non_printable - Print the ascii codes in hexa of non printable chars
  * @arg_ls: List of args
  * @buf: Buffer array that handles print
  * @flags:  Calculates flags
@@ -62,7 +62,7 @@ int prnt_pointer(va_list arg_ls, char buf[],
  * @size: Size spec
  * Return: Number of chars to be printed
  */
-int prnt_non_printable(va_list arg_ls, char buf[],
+int print_non_printable(va_list arg_ls, char buf[],
 	int flags, int width, int precision, int size)
 {
 	int x = 0, ofset = 0;
@@ -93,7 +93,7 @@ int prnt_non_printable(va_list arg_ls, char buf[],
 
 /************************* print reverse *************************/
 /**
- * prnt_reverse - Print reverse string.
+ * print_reverse - Print reverse string.
  * @arg_ls: List of args
  * @buf: Buffer aray that handle print
  * @flags:  Calculates flags
@@ -103,7 +103,7 @@ int prnt_non_printable(va_list arg_ls, char buf[],
  * Return: Numbers of chars to be printed
  */
 
-int prnt_reverse(va_list arg_ls, char buf[],
+int print_reverse(va_list arg_ls, char buf[],
 	int flags, int width, int precision, int size)
 {
 	char *str;
@@ -136,7 +136,7 @@ int prnt_reverse(va_list arg_ls, char buf[],
 }
 /************************* prints strings in rot13 *************************/
 /**
- * prnt_rot13strng - Print string in rot13.
+ * print_rot13strng - Print string in rot13.
  * @arg_ls: List of args
  * @buf: Buffer array that will handle print
  * @flags:  Calculates flags
@@ -145,7 +145,7 @@ int prnt_reverse(va_list arg_ls, char buf[],
  * @size: Size spec
  * Return: Numbers of charsto be printed
  */
-int prnt_rot13strng(va_list arg_ls, char buf[],
+int print_rot13strng(va_list arg_ls, char buf[],
 	int flags, int width, int precision, int size)
 {
 	char z;
@@ -171,7 +171,7 @@ int prnt_rot13strng(va_list arg_ls, char buf[],
 			if (in[y] == str[x])
 			{
 				z = out[y];
-				write(1, z, 1);
+				write(1, &z, 1);
 				count++;
 				break;
 			}
