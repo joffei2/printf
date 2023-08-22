@@ -18,17 +18,6 @@
 
 
 
-//typedef struct fmt {
-    //char fmt;
-   // int (*fn)(va_list, char[], int, int, int, int);
-//} fmt_t;
-
-//typedef struct fmt
-//{
-    //char fmt;
-   // int (*fn)(va_list, char *, int, int, int, int);
-//} fmt_t;
-
 /**
  * struct fmt - Struct op
  *
@@ -52,7 +41,6 @@ typedef struct fmt fmt_t;
 
 
 
-//typedef struct fmt fmt_t;
 
 /*********** functions.c ******************/
 
